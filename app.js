@@ -1,8 +1,9 @@
 // Add require "request" package
 const request = require('request')
 
-//Importing geocode.js from utils
+//Importing geocode.js & forecast.js from utils
 const geocode = require('./utils/geocode')
+const forecast = require('./utils/forecast')
 
 //Store API url
 const url = 'http://api.weatherstack.com/current?access_key=96a6319277839602fd243c69140c9f03&query=37.8267,-122.4233&units=f'
@@ -50,7 +51,12 @@ const url = 'http://api.weatherstack.com/current?access_key=96a6319277839602fd24
 // })
 
 
-geocode('Philadelphia', (error,data)=>{
+geocode('Vancouver', (error,data)=>{
     console.log('Error', error)
     console.log('Data', data)
 })
+
+forecast(-75.7088, 44.1545, (error, data) => {
+    console.log('Error', error)
+    console.log('Data', data)
+  })
