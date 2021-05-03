@@ -12,8 +12,12 @@ request({
     if(error){
         console.log('Unable to connect to Mapbox API')
     }
+    else if(response.body.features.length === 0){
+        console.log('Unable to find the location, Try Again!')
+    }
     else{
         console.log(chalk.green("Latitude: " + response.body.features[0].center[1] + " , Longitude: " + response.body.features[0].center[0]))
     }
     
 })
+
