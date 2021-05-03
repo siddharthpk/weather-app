@@ -9,5 +9,11 @@ request({
     uri: url,
     json: true
 }, (error, response)=>{
-    console.log(chalk.green("Latitude: " + response.body.features[0].center[1] + " , Longitude: " + response.body.features[0].center[0]))
+    if(error){
+        console.log('Unable to connect to Mapbox API')
+    }
+    else{
+        console.log(chalk.green("Latitude: " + response.body.features[0].center[1] + " , Longitude: " + response.body.features[0].center[0]))
+    }
+    
 })
