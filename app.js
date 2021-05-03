@@ -2,8 +2,15 @@
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
-//Call geocode & forecast using callback chaining
-geocode('Boston', (error,data)=>{
+//Location input from cmd line
+const address = process.argv[2]
+
+if(!address){
+    console.log('Please provide an address')
+}
+else{
+    //Call geocode & forecast using callback chaining
+geocode(address, (error,data)=>{
     if(error){
     }
     console.log(data)
@@ -15,3 +22,4 @@ geocode('Boston', (error,data)=>{
         console.log(forecastData)
     })
 })
+}
