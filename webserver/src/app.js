@@ -1,8 +1,16 @@
-// Import express module
+// Import  modules
 const express = require('express')
+const path = require('path')
+
+// console.log(__dirname)
+// console.log(path.join(__dirname, '../public'))
+
 
 //Init an express server
 const app = express()
+
+const publicDirectoryPath=path.join(__dirname, '../public')
+app.use(express.static(publicDirectoryPath))
 
 /*
     app.get takes 2 args
