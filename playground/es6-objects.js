@@ -26,6 +26,8 @@ const product = {
 
 
 //Modern destructuring for multiple object properties, can include non-existing properties in the {} on the left
-const{label,price,stock} = product
-console.log(label)
+// To rename a variable use 'object_property: new_name'
+// To set a deafult value for a non-existing property using '=' operation
+const{label: productLabel,price,stock, rating = 5} = product
+console.log(productLabel)
 console.log(stock)
