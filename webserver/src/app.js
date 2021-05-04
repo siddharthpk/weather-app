@@ -20,11 +20,6 @@ app.use(express.static(publicDirectoryPath))
         - arg2 : response to be sent to the requester
 */
 
-// Home page
-app.get('', (req,res )=>{
-    res.send('<h1>Weather</h1>')
-})
-
 // Help page
 app.get('/help', (req,res)=>{
     res.send([{
