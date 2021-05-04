@@ -14,22 +14,31 @@ const app = express()
 
 // Home page
 app.get('', (req,res )=>{
-    res.send('Hello Express!')
+    res.send('<h1>Weather</h1>')
 })
 
 // Help page
 app.get('/help', (req,res)=>{
-    res.send('Help Page')
+    res.send([{
+        name: 'Sid',
+        age: 23
+        },{
+            name: 'Siddharth'
+        }
+    ])
 })
 
 // About page
 app.get('/about', (req,res)=>{
-    res.send('About Page')
+    res.send('<h1>About</h1>')
 })
 
 // Weather page
 app.get('/weather', (req,res)=>{
-    res.send('Show Weather')
+    res.send({
+        forecast: 'Sunny',
+        location: 'Victoria'
+    })
 })
 
 /*
