@@ -18,7 +18,7 @@ app.use(express.static(publicDirectoryPath))
     arg2: function for respective route
         - arg1 : object with incoming info from req from server
         - arg2 : response to be sent to the requester
-*/
+
 
 // Help page
 app.get('/help', (req,res)=>{
@@ -43,6 +43,8 @@ app.get('/weather', (req,res)=>{
         location: 'Victoria'
     })
 })
+
+*/
 
 /*
     app.listen is to start the server
