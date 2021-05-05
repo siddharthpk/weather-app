@@ -8,9 +8,12 @@ const path = require('path')
 
 //Init an express server
 const app = express()
-
 const publicDirectoryPath=path.join(__dirname, '../public')
+
+app.set('view engine', 'hbs')
 app.use(express.static(publicDirectoryPath))
+
+
 
 /*
     app.get takes 2 args
@@ -19,7 +22,29 @@ app.use(express.static(publicDirectoryPath))
         - arg1 : object with incoming info from req from server
         - arg2 : response to be sent to the requester
 
+*/
 
+app.get('', (req,res)=>{
+    res.render('index', {
+        title: 'Weather App',
+        name: 'Sid'
+    })
+})
+
+app.get('/about', (req,res)=>{
+    res.render('about', {
+        title: 'About Me',
+        name: 'Sid'
+    })
+})
+
+app.get('/help', (req,res)=>{
+    res.render('help', {
+        title: 'Help',
+        message: 'Help welp'
+    })
+})
+/*
 // Help page
 app.get('/help', (req,res)=>{
     res.send([{
