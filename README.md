@@ -22,5 +22,9 @@ This repo demonstrates the different concepts I picked up while learning from Ud
   - UI Wireframing
   - Deployment
 
+## Features Implemented
+  - API access
+  - 
+
 
  
