@@ -1,2 +1,17 @@
-# weather-app
-Weather App using Node.js
+# Weather App
+
+This repo demonstrates the different concepts I picked up while learning from Udemy. 
+
+## Concepts learned:
+  - Asynchronous JS
+  - Callback Functions, Abstraction & Chaining
+  - Error Handling
+  - Data retreival from Mapbox & Weathestack APIs using HTTP requests
+  - Exporting results to the user using APIs
+  - Object destructuring 
+  - Web Servers
+  - Express! 
+  - Serving Static & Dynamic assets
+
+## Concepts in the pipeline
+ 
