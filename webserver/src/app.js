@@ -34,6 +34,8 @@ app.use(express.static(publicDirectoryPath))
 
 */
 
+
+// Home page
 app.get('', (req,res)=>{
     res.render('index', {
         title: 'Weather App',
@@ -41,6 +43,7 @@ app.get('', (req,res)=>{
     })
 })
 
+// About page
 app.get('/about', (req,res)=>{
     res.render('about', {
         title: 'About Me',
@@ -48,6 +51,7 @@ app.get('/about', (req,res)=>{
     })
 })
 
+// Help page
 app.get('/help', (req,res)=>{
     res.render('help', {
         title: 'Help',
@@ -55,6 +59,8 @@ app.get('/help', (req,res)=>{
         name: 'Sid'
     })
 })
+
+
 /*
 // Help page
 app.get('/help', (req,res)=>{
