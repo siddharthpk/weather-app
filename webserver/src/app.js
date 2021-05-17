@@ -60,6 +60,13 @@ app.get('/help', (req,res)=>{
     })
 })
 
+// Weather page
+app.get('/weather', (req,res)=>{
+    res.send({
+        forecast: 'Sunny',
+        location: 'Victoria'
+    })
+})
 
 /*
 // Help page
@@ -77,15 +84,6 @@ app.get('/help', (req,res)=>{
 app.get('/about', (req,res)=>{
     res.send('<h1>About</h1>')
 })
-
-// Weather page
-app.get('/weather', (req,res)=>{
-    res.send({
-        forecast: 'Sunny',
-        location: 'Victoria'
-    })
-})
-
 */
 
 /*
