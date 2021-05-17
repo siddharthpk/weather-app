@@ -68,6 +68,16 @@ app.get('/weather', (req,res)=>{
     })
 })
 
+// Looks for pages invoked further into help
+app.get('/help/*', (req,res)=>{
+    res.send('Help article not found')
+})
+
+// 404 Pages - NEEDS TO BE SET UP AT LAST, EXPRESS LOOKS FOR A MATCH BEFORE THIS TO INVOKE *
+app.get('*', (req,res)=>{
+    res.send('404: Not Found!')
+})
+
 /*
 // Help page
 app.get('/help', (req,res)=>{
