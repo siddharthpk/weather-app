@@ -1,6 +1,3 @@
-console.log('Client side JS file is loaded')
-
-
 //On Clicking the button in form
 const weatherForm = document.querySelector('form')
 
@@ -25,7 +22,7 @@ weatherForm.addEventListener('submit', (e) => {
     message2.textContent = ''
 
         // Invoking Fetch API
-        fetch('http://localhost:3000/weather?address=' + location).then((response) => {
+        fetch('/weather?address=' + location).then((response) => {
             response.json().then((data)=>{
                 if(data.error){
                     message1.textContent= data.error
