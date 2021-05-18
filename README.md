@@ -1,6 +1,6 @@
 # Weather App
 
-This repo demonstrates the different concepts I picked up while learning from Udemy. 
+This repo hosts code for a minimalistic Weather App that allows users to input a desired location and retreive the current weather. 
 
 ## Concepts learned:
   - Asynchronous JS
@@ -15,7 +15,7 @@ This repo demonstrates the different concepts I picked up while learning from Ud
   - 404 Pages
   - Templating
   - Application Styling
-  - API access from browser
+  - API access from browser - Mapbox, Weatherstack
   - JSON HTTP Endpoint
   - UI Designing
   - Cloud Deployment
