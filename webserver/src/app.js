@@ -62,10 +62,33 @@ app.get('/help', (req,res)=>{
 
 // Weather page
 app.get('/weather', (req,res)=>{
+    //Weather Endpoint Bsegin
+    if(!req.query.address){
+        return res.send({
+            error: 'You must provide an address!'
+        })
+    }
     res.send({
+        address: req.query.address,
         forecast: 'Sunny',
         location: 'Victoria'
     })
+    //Weather Endpoint End
+})
+
+// Products endpoint 
+app.get('/products', (req,res)=>{
+    if(!req.query.search){
+        return res.send({
+            error: 'You must provide a search term'
+        })
+    }
+    console.log(req.query.search)
+
+    res.send({
+        products: []
+    })
+    
 })
 
 // Looks for pages invoked further into help
