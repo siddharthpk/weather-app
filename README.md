@@ -19,3 +19,7 @@ This repo demonstrates the different concepts I picked up while learning from Ud
   - JSON HTTP Endpoint
   - UI Designing
   - Cloud Deployment
+
+## Deployment
+
+The web app is deployed to Heroku Dyno offered under GitHub Dev Pack. Give it about 15-30 seconds to load.
