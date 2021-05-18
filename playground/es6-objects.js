@@ -33,7 +33,7 @@ console.log(productLabel)
 console.log(stock)
 
 
-const transaction = (type, {label, stock} = {}) =>{  //Inline destructuring an object
+const transaction = (type, {label = '', stock = 0} = {}) =>{  //Inline destructuring an object
     console.log(type,label,stock)
 }
 
