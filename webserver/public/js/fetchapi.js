@@ -19,7 +19,7 @@ weatherForm.addEventListener('submit', (e) => {
     //Grabbing user input for location
     const location = searchElement.value
 
-    //console.log(location)
+   
     // Changing paragraph content according to the api response
     message1.textContent = 'Loading...'
     message2.textContent = ''
@@ -33,8 +33,7 @@ weatherForm.addEventListener('submit', (e) => {
                 }
                 message1.textContent = data.location
                 message2.textContent = data.forecast
-                // console.log(data.location)
-                // console.log(data.forecast)
+             
             })
         })
 })
