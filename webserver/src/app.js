@@ -2,6 +2,8 @@
 const express = require('express')
 const path = require('path')
 const hbs = require('hbs')
+const geocode = require('./utils/geocode')
+const forecast = require('./utils/forecast')
 
 // console.log(__dirname)
 // console.log(path.join(__dirname, '../public'))
@@ -62,18 +64,35 @@ app.get('/help', (req,res)=>{
 
 // Weather page
 app.get('/weather', (req,res)=>{
-    //Weather Endpoint Bsegin
+    //WEATHER HTTP ENDPOINT BEGIN
     if(!req.query.address){
         return res.send({
             error: 'You must provide an address!'
         })
     }
-    res.send({
-        address: req.query.address,
-        forecast: 'Sunny',
-        location: 'Victoria'
+
+    //Call geocode & forecast using callback chaining
+    geocode(req.query.address, (error,{latitude, longitude, location})=>{  //Destructured data object
+        if(error){
+            return res.send({
+                error //Used shorthand here due to same name for prop & string
+            })
+        }
+            
+            forecast(latitude,longitude, (error, forecastData) => {
+                if(error){res.send({
+                    error
+                 })
+                }
+                
+                res.send({
+                    forecast: forecastData,
+                    location: location,
+                    address: req.query.address
+                })
+            })
     })
-    //Weather Endpoint End
+    //WEATHER ENDPOINT END
 })
 
 // Products endpoint 
