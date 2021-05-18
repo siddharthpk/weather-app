@@ -72,7 +72,7 @@ app.get('/weather', (req,res)=>{
     }
 
     //Call geocode & forecast using callback chaining
-    geocode(req.query.address, (error,{latitude, longitude, location})=>{  //Destructured data object
+    geocode(req.query.address, (error,{latitude, longitude, location} = {} )=>{  //Destructured data object
         if(error){
             return res.send({
                 error //Used shorthand here due to same name for prop & string
