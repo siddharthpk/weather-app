@@ -5,8 +5,6 @@
     <title>Home</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="icon" href="/images/weather.png">
-    <script src="/js/fetchapi.js"></script>
-
 </head>
 
 <body>
@@ -14,9 +12,16 @@
          {{>header}}
          <p>Use this app to get the weather of the desired location</p>
 
+         <form>
+             <input placeholder="Location">
+             <button> Search</button>
+         </form>
+
     </div>
    
     {{>footer}}
+    
+     <script src="/js/fetchapi.js"></script>
 </body>
 
 </html>
