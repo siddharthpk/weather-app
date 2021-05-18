@@ -19,5 +19,5 @@ This repo demonstrates the different concepts I picked up while learning from Ud
   - Application Styling
   - API access from browser
   - JSON HTTP Endpoint
-  - UI Wireframing
+  - UI Designing
   - Deployment
