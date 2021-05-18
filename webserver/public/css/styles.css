@@ -4,7 +4,9 @@ body{
     max-width: 650px;
     margin: 0 auto;
     padding: 0 16px;
-
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 footer{
@@ -30,3 +32,11 @@ header a{
     text-decoration: none;
 }
 
+.potrait{
+    width: 250px;
+
+}
+
+.main-content{
+    flex-grow: 1; /*Allows content to take the remaining space*/
+}
