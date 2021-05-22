@@ -1,8 +1,9 @@
 // Add require "request" package
 const request = require('request')
+const dotenv = require('dotenv').config()
 
 // Your API Key
-const API_KEY = config.WEATHERSTACK_KEY
+const API_KEY = process.env.WEATHERSTACK_KEY
 
 // Add forecast feature here
 const forecast = (lat,long, callback) =>{

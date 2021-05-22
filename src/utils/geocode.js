@@ -1,13 +1,15 @@
 // Add require "request" package
 const request = require('request')
+const dotenv = require('dotenv').config()
 
 // Your API Key
-const API_KEY = config.MAPBPOX_KEY
+const API_KEY = process.env.MAPBOX_KEY
+console.log(API_KEY)
 
 //Adding geocoding feature here
 const geocode = (address, callback) =>{
     const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(address) +'.json?access_token=' + encodeURIComponent(API_KEY) + '&limit=1'
-
+    
     request({
         url: url,
         json: true
