@@ -1,9 +1,12 @@
 // Add require "request" package
 const request = require('request')
 
+// Your API Key
+const API_KEY = config.WEATHERSTACK_KEY
+
 // Add forecast feature here
 const forecast = (lat,long, callback) =>{
-    const url = 'http://api.weatherstack.com/current?access_key=96a6319277839602fd243c69140c9f03&query=' + lat +','+long+ '&units=f'
+    const url = 'http://api.weatherstack.com/current?access_key='+ encodeURIComponent(API_KEY) + '&query=' + lat +','+long+ '&units=f'
     //console.log(url)
     request({
         url,    //Destructured url variable
