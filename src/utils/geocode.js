@@ -4,7 +4,6 @@ const dotenv = require('dotenv').config()
 
 // Your API Key
 const API_KEY = process.env.MAPBOX_KEY
-console.log(API_KEY)
 
 //Adding geocoding feature here
 const geocode = (address, callback) =>{
