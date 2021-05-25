@@ -2,18 +2,17 @@
 
 This repo hosts code for a minimalistic Weather App that allows users to input a desired location and retreive the current weather. 
 
-## Before Deplying
+## Before Deployment
 
-Run `npm install` to install all required dependencies.
-
-Create a `.env` file and add the following
+- Run `npm install` to install all required dependencies.
+- Create a `.env` file and add the following
     
-    WEATHERSTACK_KEY = 'YOUR_API_KEY'
-    MAPBOX_KEY = 'YOUR_API_KEY'
+        WEATHERSTACK_KEY = 'YOUR_API_KEY'
+        MAPBOX_KEY = 'YOUR_API_KEY'
     
-Run `npm start` to run the node scripts 
+- Run `npm start` to run the node scripts 
 
-Visit `localhost:3000` in a browser window 
+- Visit `localhost:3000` in a browser window to see your app,
 
 ## Concepts learned:
   - Asynchronous JS
