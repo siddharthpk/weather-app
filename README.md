@@ -12,7 +12,7 @@ This repo hosts code for a minimalistic Weather App that allows users to input a
     
 - Run `npm start` to run the node scripts 
 
-- Visit `localhost:3000` in a browser window to see your app,
+- Visit `localhost:5000` in a browser window to see your app,
 
 # Concepts learned:
   - Asynchronous JS
