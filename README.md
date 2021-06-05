@@ -14,6 +14,14 @@ This repo hosts code for a minimalistic Weather App that allows users to input a
 
 - Visit `localhost:5000` in a browser window to see your app,
 
+# Possible deployment issues encouter
+
+You may run into a situation where you followed all the steps in the previous section but your heroku deployment doesn't work. That is mostly because your private keys aren't available to Heroku.
+
+Here's what you'll need to do to resolve that,
+
+- 
+
 # Concepts learned:
   - Asynchronous JS
   - Callback Functions, Abstraction & Chaining
