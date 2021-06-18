@@ -42,7 +42,7 @@ Here's what you'll need to do to resolve that,
 
 # Deployment
 
-The web app is deployed to Heroku Dyno offered under GitHub Dev Pack. Give it about 15-30 seconds to load.
+The web app is deployed to Heroku Dyno offered under GitHub Dev Pack. Give it about 15 seconds to load.
 
 # Next Steps
 - Add a Dockerfile
